@@ -24,7 +24,7 @@ end
 ##
 # the id of mongoid is not integer, correct the id_partitioin.
 Paperclip.interpolates :id_partition do |attachment, style|
-  attachment.instance.id.to_s.scan(/.{2}/).join("/")
+  attachment.instance.id.to_s.scan(/.{4}/).join("/")
 end
 
 ##
